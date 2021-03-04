@@ -1,0 +1,15 @@
+<h1>Destinations Show Page</h1>
+
+<% if @posts %>
+    <p>Most Recent Posts:</p>
+    <ul>    
+    <% @posts.each do |post| %>
+        <li><%= post.title %></li>
+    <% end %><br>
+    </ul>
+Most Liked Post: <%= link_to @featured.title, post_path(@featured) %><br><br>
+
+Average Blogger Age: <%= @average_age %>
+
+<% end %>
+
